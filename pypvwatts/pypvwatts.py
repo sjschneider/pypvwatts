@@ -146,8 +146,8 @@ class PVWatts():
         if dataset is None:
             return
 
-        if not isinstance(dataset, (str, unicode)):
-            raise PVWattsValidationError('dataset must be str or unicode')
+        if not isinstance(dataset, (str)):
+            raise PVWattsValidationError('dataset must be str')
 
         if dataset not in ('tmy2', 'tmy3', 'intl'):
             raise PVWattsValidationError(
@@ -173,9 +173,9 @@ class PVWatts():
         if timeframe is None:
             return
 
-        if not isinstance(timeframe, (str, unicode)):
+        if not isinstance(timeframe, (str)):
             raise PVWattsValidationError(
-                'timeframe must be str or unicode')
+                'timeframe must be str')
 
         if timeframe not in ('hourly', 'monthly'):
             raise PVWattsValidationError(
