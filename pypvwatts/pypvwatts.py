@@ -36,9 +36,9 @@ class PVWatts():
         if system_capacity is None:
             return
 
-        if not isinstance(system_capacity, (int, long, float)):
+        if not isinstance(system_capacity, (int, float)):
             raise PVWattsValidationError(
-                'system_capacity must be int, long or float')
+                'system_capacity must be int or float')
 
         if not (0.05 <= system_capacity and system_capacity <= 500000):
             raise PVWattsValidationError(
@@ -53,7 +53,7 @@ class PVWatts():
 
         if not isinstance(module_type, (int)):
             raise PVWattsValidationError(
-                'module_type must be int, long or float')
+                'module_type must be int or float')
 
         if module_type not in (0, 1, 2):
             raise PVWattsValidationError(
@@ -66,8 +66,8 @@ class PVWatts():
         if losses is None:
             return
 
-        if not isinstance(losses, (int, long, float)):
-            raise PVWattsValidationError('losses must be int, long or float')
+        if not isinstance(losses, (int, float)):
+            raise PVWattsValidationError('losses must be int or float')
 
         if not (-5 <= losses and losses <= 99):
             raise PVWattsValidationError('losses must be >= -5\% and <= 99%')
@@ -81,7 +81,7 @@ class PVWatts():
 
         if not isinstance(array_type, (int)):
             raise PVWattsValidationError(
-                'array_type must be int, long or float')
+                'array_type must be int or float')
 
         if array_type not in (0, 1, 2, 3, 4):
             raise PVWattsValidationError(
@@ -94,8 +94,8 @@ class PVWatts():
         if tilt is None:
             return
 
-        if not isinstance(tilt, (int, long, float)):
-            raise PVWattsValidationError('tilt must be int, long or float')
+        if not isinstance(tilt, (int, float)):
+            raise PVWattsValidationError('tilt must be int or float')
 
         if not (0 <= tilt and tilt <= 90):
             raise PVWattsValidationError('tilt must be >= 0 and <= 90')
@@ -107,8 +107,8 @@ class PVWatts():
         if azimuth is None:
             return
 
-        if not isinstance(azimuth, (int, long, float)):
-            raise PVWattsValidationError('azimuth must be int, long or float')
+        if not isinstance(azimuth, (int, float)):
+            raise PVWattsValidationError('azimuth must be int or float')
 
         if not (0 <= azimuth and azimuth <= 360):
             raise PVWattsValidationError('azimuth must be >= 0 and <= 360')
@@ -120,8 +120,8 @@ class PVWatts():
         if lat is None:
             return
 
-        if not isinstance(lat, (int, long, float)):
-            raise PVWattsValidationError('lat must be int, long or float')
+        if not isinstance(lat, (int, float)):
+            raise PVWattsValidationError('lat must be int or float')
 
         if not (-90 <= lat and lat <= 90):
             raise PVWattsValidationError('lat must be >= -90 and <= 90')
@@ -133,8 +133,8 @@ class PVWatts():
         if lon is None:
             return
 
-        if not isinstance(lon, (int, long, float)):
-            raise PVWattsValidationError('lon must be int, long or float')
+        if not isinstance(lon, (int, float)):
+            raise PVWattsValidationError('lon must be int or float')
 
         if not (-180 <= lon and lon <= 180):
             raise PVWattsValidationError('lon must be >= -180 and <= 180')
@@ -160,8 +160,8 @@ class PVWatts():
         if radius is None:
             return
 
-        if not isinstance(radius, (int, long, float)):
-            raise PVWattsValidationError('radius must be int, long or float')
+        if not isinstance(radius, (int, float)):
+            raise PVWattsValidationError('radius must be int or float')
 
         if not (0 <= radius):
             raise PVWattsValidationError('radius must be >= 0')
@@ -188,9 +188,9 @@ class PVWatts():
         if dc_ac_ratio is None:
             return
 
-        if not isinstance(dc_ac_ratio, (int, long, float)):
+        if not isinstance(dc_ac_ratio, (int, float)):
             raise PVWattsValidationError(
-                'dc_ac_ratio must be int, long or float')
+                'dc_ac_ratio must be int or float')
 
         if not (0 < dc_ac_ratio):
             raise PVWattsValidationError(
@@ -203,8 +203,8 @@ class PVWatts():
         if gcr is None:
             return
 
-        if not isinstance(gcr, (int, long, float)):
-            raise PVWattsValidationError('gcr must be int, long or float')
+        if not isinstance(gcr, (int, float)):
+            raise PVWattsValidationError('gcr must be int or float')
 
         if not (0 <= gcr and gcr <= 3):
             raise PVWattsValidationError('gcr must be >= 0 and <= 3')
@@ -216,8 +216,8 @@ class PVWatts():
         if inv_eff is None:
             return
 
-        if not isinstance(inv_eff, (int, long, float)):
-            raise PVWattsValidationError('inv_eff must be int, long or float')
+        if not isinstance(inv_eff, (int, float)):
+            raise PVWattsValidationError('inv_eff must be int or float')
 
         if not (90 <= inv_eff and inv_eff <= 99.5):
             raise PVWattsValidationError('inv_eff must be >= 90 and <= 99.5')
